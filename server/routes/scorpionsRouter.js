@@ -11,7 +11,7 @@ const scorpionRouter = express.Router();
 
 scorpionRouter.route('/').get(getAllScorpions);
 scorpionRouter.route('/poisonous').get(getPoisonousScorpions);
-scorpionRouter.route('/range').get(getRangeofScorpions);
+scorpionRouter.route('/range/:num').get(getRangeofScorpions);
 scorpionRouter.route('/:id').get(getScorpionById);
 
 module.exports = scorpionRouter;

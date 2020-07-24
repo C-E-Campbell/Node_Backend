@@ -7,7 +7,7 @@ module.exports = [
       'https://res.cloudinary.com/dvxz6le8d/image/upload/c_thumb,w_200,g_face/v1595572195/Deathstalker_bloohn.jpg',
     name: 'Deathstalker',
     species: 'Leiurus quinquestriatus',
-    poisionous: true,
+    poisonous: true,
     aka: [
       'Palestine yellow scorpion',
       'Naqab desert scorpion',
