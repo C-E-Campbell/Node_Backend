@@ -1,26 +1,18 @@
 require('dotenv').config({ path: '../.env' });
-const { PORT, MongoURI } = process.env;
+const { PORT } = process.env;
 const express = require('express');
-const mongoose = require('mongoose');
+const cors = require('cors');
 const morgan = require('morgan');
-
+const data = require('./data');
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(morgan('tiny'));
 
-mongoose
-  .connect(MongoURI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log('Db is connected!');
-    console.log('Code away my friend!');
-  });
+app.get('/scorpions', (req, res, next) => {
+  res.send(data);
+});
 
 app.listen(PORT, () => {
   console.log(`Open on port ${PORT}`);
