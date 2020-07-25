@@ -14,5 +14,5 @@ app.use(morgan('tiny'));
 app.use('/api/v1/scorpions', scorpionRouter);
 
 app.listen(8293, () => {
-  console.log(`Open on port ${PORT}`);
+  console.log(`Open on port 8293`);
 });
