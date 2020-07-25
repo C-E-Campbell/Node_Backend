@@ -6,7 +6,7 @@ module.exports = {
   },
   getScorpionById: (req, res) => {
     const id = Number(req.params.id);
-    if (id > 15 || id < 1) {
+    if (id > data.length || id < 1) {
       return res
         .status(500)
         .json(
